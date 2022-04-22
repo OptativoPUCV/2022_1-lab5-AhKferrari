@@ -415,3 +415,26 @@ treemap.c:73:5: error: expected ‘;’ before ‘padre’
 cc1: all warnings being treated as errors
 Compilation failed
 143c650
+Fri Apr 22 16:23:17 UTC 2022: 
+ treemap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:63:49: error: value computed is not used [-Werror=unused-value]
+     else(tree->lower_than( aux->pair->key, key) == 1){
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+treemap.c:63:54: error: expected ‘;’ before ‘{’ token
+     else(tree->lower_than( aux->pair->key, key) == 1){
+                                                      ^
+treemap.c:73:45: error: value computed is not used [-Werror=unused-value]
+     (tree->lower_than( aux->pair->key, key) == 1);
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+treemap.c:72:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   else
+   ^~~~
+treemap.c:74:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+     padre->right = nodo;
+     ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+60e6539
