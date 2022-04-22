@@ -234,3 +234,14 @@ Fri Apr 22 15:53:33 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 b752d9c
+Fri Apr 22 15:56:32 UTC 2022: 
+ treemap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:99:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+b7cc8a9
