@@ -68,3 +68,33 @@ treemap.c:95:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 201e509
+Fri Apr 22 15:19:41 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘minimum’:
+treemap.c:59:27: error: ‘Pair {aka struct Pair}’ has no member named ‘root’
+   TreeNode * aux = x->pair->root;
+                           ^~
+treemap.c:65:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:86:24: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+   if (key == tree->root->key) return tree->root->pair;
+                        ^~
+treemap.c:88:9: error: expected expression before ‘)’ token
+   while()
+         ^
+treemap.c:89:46: error: lvalue required as left operand of assignment
+   if (tree->lower_than (key, aux->pair->key) = 1){
+                                              ^
+treemap.c:92:46: error: lvalue required as left operand of assignment
+   if (tree->lower_than (key, aux->pair->key) = 0)
+                                              ^
+treemap.c:95:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+2a99a10
