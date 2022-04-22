@@ -626,3 +626,24 @@ treemap.c:73:5: note: ...this statement, but the latter is misleadingly indented
 cc1: all warnings being treated as errors
 Compilation failed
 3e11788
+Fri Apr 22 16:30:11 UTC 2022: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:63:7: error: expected ‘}’ before ‘else’
+       else{
+       ^~~~
+treemap.c:68:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘padre’; did you mean ‘pair’?
+   nodo->padre = padre;
+         ^~~~~
+         pair
+treemap.c:73:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   else
+   ^~~~
+treemap.c:75:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+     padre->right = nodo;
+     ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+73e0033
