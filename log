@@ -312,3 +312,23 @@ treemap.c:55:14: error: unused variable ‘padreAux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6f2a0af
+Fri Apr 22 16:07:25 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:60:49: error: value computed is not used [-Werror=unused-value]
+     else(tree->lower_than( aux->pair->key, key) == 1)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+treemap.c:61:5: error: expected ‘;’ before ‘aux’
+     aux = aux->right;
+     ^~~
+treemap.c:65:14: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   TreeNode * nodo = createTreeNode(key,value);
+              ^~~~
+treemap.c:55:14: error: unused variable ‘padre’ [-Werror=unused-variable]
+   TreeNode * padre = NULL;
+              ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+70fce88
