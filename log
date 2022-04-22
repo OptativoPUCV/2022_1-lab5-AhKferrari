@@ -665,3 +665,14 @@ treemap.c:75:5: note: ...this statement, but the latter is misleadingly indented
 cc1: all warnings being treated as errors
 Compilation failed
 1d9932a
+Fri Apr 22 16:33:10 UTC 2022: 
+ treemap.c | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:68:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘padre’; did you mean ‘pair’?
+   nodo->padre = padre;
+         ^~~~~
+         pair
+Compilation failed
+dc02f84
