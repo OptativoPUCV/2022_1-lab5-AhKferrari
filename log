@@ -332,3 +332,13 @@ treemap.c:55:14: error: unused variable ‘padre’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 70fce88
+Fri Apr 22 16:09:02 UTC 2022: 
+ treemap.c | 20 +++++---------------
+ 1 file changed, 5 insertions(+), 15 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘minimum’:
+treemap.c:59:20: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘root’
+  TreeNode * aux = x->root;
+                    ^~
+Compilation failed
+a87ea4c
