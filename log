@@ -533,3 +533,38 @@ treemap.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 6c57ca8
+Fri Apr 22 16:26:54 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:63:7: error: expected ‘}’ before ‘else’
+       else{
+       ^~~~
+treemap.c:55:14: error: variable ‘padre’ set but not used [-Werror=unused-but-set-variable]
+   TreeNode * padre = NULL;
+              ^~~~~
+treemap.c: At top level:
+treemap.c:70:36: error: ‘key’ undeclared here (not in a function); did you mean ‘key_t’?
+   TreeNode * nodo = createTreeNode(key,value);
+                                    ^~~
+                                    key_t
+treemap.c:70:40: error: ‘value’ undeclared here (not in a function); did you mean ‘valloc’?
+   TreeNode * nodo = createTreeNode(key,value);
+                                        ^~~~~
+                                        valloc
+treemap.c:71:3: error: expected identifier or ‘(’ before ‘if’
+   if(tree->lower_than(key, aux->pair->key) == 1)
+   ^~
+treemap.c:73:3: error: expected identifier or ‘(’ before ‘else’
+   else
+   ^~~~
+treemap.c:75:10: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+     padre->right = nodo;
+          ^~
+treemap.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+cf5abcd
