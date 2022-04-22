@@ -64,14 +64,11 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         return;
       }
     }
-    
-  
-
   TreeNode * nodo = createTreeNode(key,value);
-  if(tree->lower_than(key, aux->pair->key) == 1)
+  if(tree->lower_than(key, aux->pair->key))
     padre->left = nodo;
   else
-    (tree->lower_than( aux->pair->key, key) == 1);
+    (tree->lower_than( aux->pair->key, key));
     padre->right = nodo;
 }
 
