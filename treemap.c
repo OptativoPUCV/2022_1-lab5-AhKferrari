@@ -95,7 +95,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         aux = aux->right;
     }
 }  
-  
+  else return;
 }
 
   

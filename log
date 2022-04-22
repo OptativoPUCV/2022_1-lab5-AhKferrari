@@ -245,3 +245,17 @@ treemap.c:99:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 b7cc8a9
+Fri Apr 22 15:57:09 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:98:8: error: ‘return’ with no value, in function returning non-void [-Werror]
+   else return;
+        ^~~~~~
+treemap.c:81:8: note: declared here
+ Pair * searchTreeMap(TreeMap * tree, void* key) {
+        ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+954ec52
