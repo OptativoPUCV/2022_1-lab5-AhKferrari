@@ -568,3 +568,23 @@ treemap.c:76:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 cf5abcd
+Fri Apr 22 16:28:17 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:63:7: error: expected ‘}’ before ‘else’
+       else{
+       ^~~~
+treemap.c:74:45: error: value computed is not used [-Werror=unused-value]
+     (tree->lower_than( aux->pair->key, key) == 1);
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+treemap.c:73:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   else
+   ^~~~
+treemap.c:75:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+     padre->right = nodo;
+     ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+52facc8
