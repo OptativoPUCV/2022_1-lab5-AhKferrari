@@ -1101,3 +1101,13 @@ treemap.c:80:3: error: expected ‘;’ before ‘}’ token
    ^
 Compilation failed
 0737224
+Sun Apr 24 22:03:03 UTC 2022: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:80:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+Compilation failed
+030d2a4
