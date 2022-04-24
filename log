@@ -1137,3 +1137,41 @@ treemap.c:108:7: note: ...this statement, but the latter is misleadingly indente
 cc1: all warnings being treated as errors
 Compilation failed
 51b1fcf
+Sun Apr 24 23:55:16 UTC 2022: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:106:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+     if(node->right)
+     ^~
+treemap.c:108:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+       free(node);
+       ^~~~
+treemap.c:112:26: error: passing argument 1 of ‘minimum’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+       removeNode(minimum(tree, node->right));
+                          ^~~~
+treemap.c:84:12: note: expected ‘TreeNode * {aka struct TreeNode *}’ but argument is of type ‘TreeMap * {aka struct TreeMap *}’
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+treemap.c:112:18: error: too many arguments to function ‘minimum’
+       removeNode(minimum(tree, node->right));
+                  ^~~~~~~
+treemap.c:84:12: note: declared here
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+treemap.c:112:18: error: passing argument 1 of ‘removeNode’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+       removeNode(minimum(tree, node->right));
+                  ^~~~~~~
+treemap.c:95:6: note: expected ‘TreeMap * {aka struct TreeMap *}’ but argument is of type ‘TreeNode * {aka struct TreeNode *}’
+ void removeNode(TreeMap * tree, TreeNode* node) {
+      ^~~~~~~~~~
+treemap.c:112:7: error: too few arguments to function ‘removeNode’
+       removeNode(minimum(tree, node->right));
+       ^~~~~~~~~~
+treemap.c:95:6: note: declared here
+ void removeNode(TreeMap * tree, TreeNode* node) {
+      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d39c30f
