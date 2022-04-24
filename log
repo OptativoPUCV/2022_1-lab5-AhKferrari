@@ -766,3 +766,14 @@ treemap.c:68:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named 
          pair
 Compilation failed
 0ec19eb
+Sun Apr 24 20:46:51 UTC 2022: 
+ treemap.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:66:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘padre’; did you mean ‘pair’?
+   nodo->padre = padre;
+         ^~~~~
+         pair
+Compilation failed
+333e464
