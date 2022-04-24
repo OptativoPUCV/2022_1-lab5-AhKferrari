@@ -714,3 +714,19 @@ treemap.c:72:28: error: ‘nodo’ undeclared (first use in this function); did 
 treemap.c:72:28: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 620b96d
+Sun Apr 24 20:36:49 UTC 2022: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:68:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘padre’; did you mean ‘pair’?
+   node->padre = padre;
+         ^~~~~
+         pair
+treemap.c:70:18: error: ‘nodo’ undeclared (first use in this function); did you mean ‘node’?
+     tree->root = nodo;
+                  ^~~~
+                  node
+treemap.c:70:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a67c62f
