@@ -897,3 +897,19 @@ treemap.c:74:3: error: expected ‘;’ before ‘}’ token
    ^
 Compilation failed
 f277873
+Sun Apr 24 21:46:04 UTC 2022: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:66:32: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+   else if(tree->lower_than(nodo->key, padre->key)){
+                                ^~
+treemap.c:66:44: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+   else if(tree->lower_than(nodo->key, padre->key)){
+                                            ^~
+treemap.c:75:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+Compilation failed
+e5b12b1
