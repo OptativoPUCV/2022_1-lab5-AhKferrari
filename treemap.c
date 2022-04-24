@@ -65,7 +65,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         return;}
       }
   
-  if(padre == NULL) tree->root = nodo;
+  if(padre == NULL) {
+    tree->root = nodo; }
   else if(tree->lower_than(nodo->key, padre->key)){
     nodo->parent = padre;
     padre->left = nodo;
