@@ -755,3 +755,14 @@ treemap.c:75:3: error: expected ‘;’ before ‘}’ token
    ^
 Compilation failed
 c0b705f
+Sun Apr 24 20:43:20 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:68:9: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘padre’; did you mean ‘pair’?
+   nodo->padre = padre;
+         ^~~~~
+         pair
+Compilation failed
+0ec19eb
