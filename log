@@ -880,3 +880,20 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 f0c5a46
+Sun Apr 24 21:45:10 UTC 2022: 
+ treemap.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:64:34: error: ‘nodo’ undeclared (first use in this function)
+   if(padre == NULL) tree->root = nodo;
+                                  ^~~~
+treemap.c:64:34: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:65:44: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+   else if(tree->lower_than(nodo->key, padre->key)){
+                                            ^~
+treemap.c:74:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+Compilation failed
+f277873
