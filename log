@@ -2749,3 +2749,21 @@ treemap.c:208:14: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 18d1731
+Mon Apr 25 23:32:56 UTC 2022: 
+ treemap.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:208:3: error: expected ‘}’ before ‘else’
+   else{
+   ^~~~
+treemap.c:207:14: error: unused variable ‘aux’ [-Werror=unused-variable]
+   TreeNode * aux = tree->current->parent;
+              ^~~
+treemap.c:209:10: error: ‘aux’ undeclared (first use in this function)
+    while(aux->pair->key < tree->current->pair->key){
+          ^~~
+treemap.c:209:10: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+df3ccd8
