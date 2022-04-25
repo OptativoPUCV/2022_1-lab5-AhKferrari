@@ -180,9 +180,10 @@ Pair * nextTreeMap(TreeMap * tree) {
     return tree->current->pair;
   }
   else{
-   
-    while(aux->key<tree->current->key){
-     
+   while(aux->key < tree->current->key){
+     if(aux->parent->key < tree->current->key){
+       aux->parent->key = aux->parent->parent->key;
+     }
    } 
   }
   

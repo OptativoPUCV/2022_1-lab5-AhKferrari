@@ -2065,3 +2065,28 @@ treemap.c:184:33: error: ‘TreeNode {aka struct TreeNode}’ has no member name
                                  ^~
 Compilation failed
 bc02add
+Mon Apr 25 03:28:37 UTC 2022: 
+ treemap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:183:13: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+    while(aux->key < tree->current->key){
+             ^~
+treemap.c:183:34: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+    while(aux->key < tree->current->key){
+                                  ^~
+treemap.c:184:20: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+      if(aux->parent->key < tree->current->key){
+                    ^~
+treemap.c:184:41: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+      if(aux->parent->key < tree->current->key){
+                                         ^~
+treemap.c:185:19: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+        aux->parent->key = aux->parent->parent->key;
+                   ^~
+treemap.c:185:46: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+        aux->parent->key = aux->parent->parent->key;
+                                              ^~
+Compilation failed
+83cd963
