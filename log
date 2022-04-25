@@ -1285,3 +1285,17 @@ treemap.c:109:7: note: ...this statement, but the latter is misleadingly indente
 cc1: all warnings being treated as errors
 Compilation failed
 657da21
+Mon Apr 25 00:35:41 UTC 2022: 
+ treemap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:108:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+     if(node->right)
+     ^~
+treemap.c:110:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+       free(node);
+       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d68ef5e
