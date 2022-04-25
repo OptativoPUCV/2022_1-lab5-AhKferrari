@@ -178,9 +178,11 @@ Pair * nextTreeMap(TreeMap * tree) {
   if(aux->right != NULL){
     aux = aux->right;
     tree->current = aux;
-    tree->current = minimum(tree->current);
-    return tree->current->pair;
-  }
+    while(aux->left != NULL){
+      aux = aux->left;
+    }
+    return aux->pair;
+    }
   else{
    while(aux->key < tree->current->key){
      if(aux->parent->key < tree->current->key){
