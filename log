@@ -2698,3 +2698,13 @@ Mon Apr 25 23:19:05 UTC 2022:
  tests:  22|2
 total_score: 50/70
 b061331
+Mon Apr 25 23:22:54 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:216:19: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘value’
+    else return aux->value;}
+                   ^~
+Compilation failed
+a176408
