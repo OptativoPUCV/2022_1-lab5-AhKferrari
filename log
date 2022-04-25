@@ -2714,3 +2714,20 @@ Mon Apr 25 23:23:01 UTC 2022:
  tests:  22|2
 total_score: 50/70
 abb0600
+Mon Apr 25 23:32:18 UTC 2022: 
+ treemap.c | 17 ++++++++---------
+ 1 file changed, 8 insertions(+), 9 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:203:5: error: ‘aux’ undeclared (first use in this function)
+     aux = aux->right;
+     ^~~
+treemap.c:203:5: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:208:3: error: expected ‘;’ before ‘TreeNode’
+   TreeNode * aux = tree->current->parent;
+   ^~~~~~~~
+treemap.c:209:3: error: expected ‘}’ before ‘else’
+   else{
+   ^~~~
+Compilation failed
+0bffc4d
