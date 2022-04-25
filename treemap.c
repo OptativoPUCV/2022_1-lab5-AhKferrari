@@ -206,7 +206,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     while(aux->left != NULL){
       aux = aux->left;
     }
-    return aux;
+    return aux->pair;
     }
   /*else{
    while(aux->pair->key < tree->current->pair->key){
