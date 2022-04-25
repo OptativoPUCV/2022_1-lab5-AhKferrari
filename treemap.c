@@ -213,7 +213,7 @@ Pair * nextTreeMap(TreeMap * tree) {
        aux = aux->parent;
        aux->parent = aux->parent->parent;
      }
-   else return aux->value;} 
+   else return aux->pair->value;} 
   } 
   
   return NULL;
