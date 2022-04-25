@@ -2643,3 +2643,22 @@ Mon Apr 25 22:28:43 UTC 2022:
  tests:  22|2
 total_score: 50/70
 bcac54d
+Mon Apr 25 22:51:37 UTC 2022: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:212:20: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+      if(aux->parent->key < tree->current->key){
+                    ^~
+treemap.c:212:41: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+      if(aux->parent->key < tree->current->key){
+                                         ^~
+treemap.c:213:19: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+        aux->parent->key = aux->parent->parent->key;
+                   ^~
+treemap.c:213:46: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+        aux->parent->key = aux->parent->parent->key;
+                                              ^~
+Compilation failed
+8462091
