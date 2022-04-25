@@ -1636,3 +1636,9 @@ treemap.c:112:7: error: expected ‘;’ before ‘node’
        ^~~~
 Compilation failed
 76a7530
+Mon Apr 25 01:36:08 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  16|4
+total_score: 30/70
+3178934
