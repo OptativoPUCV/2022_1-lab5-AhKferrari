@@ -94,45 +94,44 @@ TreeNode * minimum(TreeNode * x){
 
 void removeNode(TreeMap * tree, TreeNode* node) {
 
-  TreeNode * padre = node->parent;
   
   if (tree == NULL || tree->root == NULL) return;
   if (node->left == NULL && node->right == NULL) {
-    if(padre->left == NULL) padre->right = NULL;
-    else padre->left = NULL;
+    if(node->parent->left == NULL) node->parent->right = NULL;
+    else node->parent->left = NULL;
     return;
   }
   
-  if(padre->right == node){
+  if(node->parent->right == node){
       if(node->left != NULL && node->right == NULL){
       if(node->left != NULL){
-        padre->right = node->left;
-        node->left->parent = padre;
+        node->parent->right = node->left;
+        node->left->parent = node->parent;
         node=NULL; }
         //free(node);
       return;}
 
     if(node->left == NULL && node->right != NULL){
       if(node->right != NULL){
-        padre->right = node->right;
-        node->right->parent = padre;
+        node->parent->right = node->right;
+        node->right->parent = node->parent;
         node=NULL; }
         //free(node);
       return;}
   }
 
-  if(padre->left == node){
+  if(node->parent->left == node){
      if(node->left != NULL){
-        padre->left = node->left;
-        node->left->parent = padre;
+        node->parent->left = node->left;
+        node->left->parent = node->parent;
         node=NULL; }
         //free(node);
       return;}
 
     if(node->left == NULL && node->right != NULL){
       if(node->right != NULL){
-        padre->left = node->right;
-        node->right->parent = padre;
+        node->parent->left = node->right;
+        node->right->parent = node->parent;
         node=NULL; }
         //free(node);
       return;}
