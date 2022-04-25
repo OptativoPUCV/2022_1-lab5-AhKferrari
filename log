@@ -2421,3 +2421,16 @@ Mon Apr 25 21:23:38 UTC 2022:
  tests:  18|3
 total_score: 35/70
 565c41b
+Mon Apr 25 21:24:33 UTC 2022: 
+ treemap.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:128:19: error: expected ‘;’ before ‘}’ token
+         free(node)}
+                   ^
+treemap.c:136:19: error: expected ‘;’ before ‘}’ token
+         free(node)}
+                   ^
+Compilation failed
+eeb58f2
