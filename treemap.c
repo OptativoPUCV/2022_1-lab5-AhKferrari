@@ -102,7 +102,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     return;
   }
   
-  if(node->left != NULL && node->right == NULL){  // 
+  if(node->left != NULL && node->right == NULL){  // nodo es hijo izq y tiene un hijo izq
     if(is_equal(tree, node->parent->left, node)){
       if(node->left != NULL){
         node->parent->left = node->left;
@@ -112,7 +112,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         //free(node);
       
 
-    if(is_equal(tree, node->parent->right, node)){
+    if(is_equal(tree, node->parent->right, node)){  // nodo es hijo der y tiene un hijo izq
      if(node->left != NULL){
         node->parent->right = node->left;
         node->left->parent = node->parent;
@@ -122,7 +122,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       
   }
 
-  if(node->left == NULL && node->right != NULL){
+  if(node->left == NULL && node->right != NULL){ // nodo es hijo der y tiene un hijo der
     if(is_equal(tree, node->parent->right, node)){
      if(node->right != NULL){
         node->parent->right = node->right;
@@ -131,7 +131,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         return;}}
         //free(node);
       
-    if(is_equal(tree, node->parent->left, node)){  
+    if(is_equal(tree, node->parent->left, node)){  //nodo es hijo izq y tiene hijo der
       if(node->right != NULL){
         node->parent->left = node->right;
         node->right->parent = node->parent;
