@@ -2165,3 +2165,20 @@ treemap.c:189:46: error: ‘TreeNode {aka struct TreeNode}’ has no member name
                                               ^~
 Compilation failed
 3f216c2
+Mon Apr 25 03:41:21 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c:194:3: error: expected identifier or ‘(’ before ‘return’
+   return NULL;
+   ^~~~~~
+treemap.c:195:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:192:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+acdd402
