@@ -2256,3 +2256,20 @@ treemap.c:215:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 b37bbcb
+Mon Apr 25 20:42:39 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c:147:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:206:4: error: expected expression before ‘else’
+   *else{
+    ^~~~
+treemap.c:215:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+82d7987
