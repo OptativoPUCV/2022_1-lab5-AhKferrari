@@ -2731,3 +2731,21 @@ treemap.c:209:3: error: expected ‘}’ before ‘else’
    ^~~~
 Compilation failed
 0bffc4d
+Mon Apr 25 23:32:28 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:203:5: error: ‘aux’ undeclared (first use in this function)
+     aux = aux->right;
+     ^~~
+treemap.c:203:5: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:209:3: error: expected ‘}’ before ‘else’
+   else{
+   ^~~~
+treemap.c:208:14: error: unused variable ‘aux’ [-Werror=unused-variable]
+   TreeNode * aux = tree->current->parent;
+              ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+18d1731
