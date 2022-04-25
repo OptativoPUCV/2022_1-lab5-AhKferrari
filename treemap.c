@@ -146,6 +146,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       min->parent = node->parent;
       node = NULL;
       removeNode(tree, minimum(node->right));
+      return;
       }
   }
     
