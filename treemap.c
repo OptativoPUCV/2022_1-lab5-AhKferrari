@@ -100,15 +100,17 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     else node->parent->left = NULL;
     return;
   }
-  else if ((node->left != NULL && node->right == NULL)||(node->left == NULL && node->right != NULL)){
-    if(node->left != NULL) 
+  else if (node->left != NULL && node->right == NULL){
       node->parent->left = node->left;
       node->left = NULL;
-    if(node->right != NULL)
+      return;}
+
+    if(node->left == NULL && node->right != NULL){
       node->parent->right = node->right;    
-      node->right = NULL;  
-    return;
-    }
+      node->right = NULL;
+      return;}  
+    
+    
     else{
       node = minimum(node->right);
       removeNode(tree, minimum (node->right));
