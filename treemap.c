@@ -204,9 +204,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     return tree->current->pair;
     }
     
-  
-  
-  else{
+  /*else{
     TreeNode * aux = tree->current->parent;
     while(aux->pair->key < tree->current->pair->key){
      if(aux->parent->pair->key < tree->current->pair->key){
@@ -214,7 +212,7 @@ Pair * nextTreeMap(TreeMap * tree) {
        aux->parent = aux->parent->parent;
      }
    else return aux->pair;} 
-  } 
+  } */
   
   return NULL;
 }
