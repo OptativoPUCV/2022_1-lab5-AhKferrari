@@ -102,28 +102,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     return;
   }
   
-  if(is_equal(tree, node->parent->right, node)){
+  if(is_equal(tree, node->parent->left, node)){
       if(node->left != NULL && node->right == NULL){
       if(node->left != NULL){
-        node->parent->right = node->left;
-        node->left->parent = node->parent;
-        node=NULL; }
-        //free(node);
-      return;}
-
-    if(node->left == NULL && node->right != NULL){
-      if(node->right != NULL){
-        node->parent->right = node->right;
-        node->right->parent = node->parent;
-        node=NULL; }
-        //free(node);
-      return;}
-  }
-
-  if(is_equal(tree, node->parent->left, node)){
-     if(node->left != NULL){
         node->parent->left = node->left;
-        node->left->parent = node->parent;
+        node->left = node->parent;
         node=NULL; }
         //free(node);
       return;}
@@ -131,7 +114,24 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     if(node->left == NULL && node->right != NULL){
       if(node->right != NULL){
         node->parent->left = node->right;
-        node->right->parent = node->parent;
+        node->right = node->parent;
+        node=NULL; }
+        //free(node);
+      return;}
+  }
+
+  if(is_equal(tree, node->parent->right, node)){
+     if(node->left != NULL){
+        node->parent->right = node->left;
+        node->left = node->parent;
+        node=NULL; }
+        //free(node);
+      return;}
+
+    if(node->left == NULL && node->right != NULL){
+      if(node->right != NULL){
+        node->parent->right = node->right;
+        node->right = node->parent;
         node=NULL; }
         //free(node);
       return;}

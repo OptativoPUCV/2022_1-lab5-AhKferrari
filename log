@@ -2386,3 +2386,9 @@ Mon Apr 25 21:03:14 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9fc3218
+Mon Apr 25 21:05:16 UTC 2022: 
+ treemap.c | 20 ++++++++++----------
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+ tests:  18|3
+total_score: 35/70
+c6ae9da
