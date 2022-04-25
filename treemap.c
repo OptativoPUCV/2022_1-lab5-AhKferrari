@@ -111,11 +111,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       return;}  
     
     
-    else{
+    /*else{
       node = minimum(node->right);
       removeNode(tree, minimum (node->right));
     }
-  
+    */
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
