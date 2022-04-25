@@ -2225,3 +2225,34 @@ treemap.c:147:1: error: expected identifier or ‘(’ before ‘}’ token
  ^
 Compilation failed
 15b8c7c
+Mon Apr 25 20:41:58 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:106:3: error: expected ‘}’ before ‘else’
+   else if (node->left != NULL && node->right == NULL){
+   ^~~~
+treemap.c: At top level:
+treemap.c:123:3: error: expected identifier or ‘(’ before ‘if’
+   if(node->parent->left == node){
+   ^~
+treemap.c:131:5: error: expected identifier or ‘(’ before ‘if’
+     if(node->left == NULL && node->right != NULL){
+     ^~
+treemap.c:139:3: error: expected identifier or ‘(’ before ‘}’ token
+   }
+   ^
+treemap.c:147:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:206:4: error: expected expression before ‘else’
+   *else{
+    ^~~~
+treemap.c:215:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+b37bbcb
