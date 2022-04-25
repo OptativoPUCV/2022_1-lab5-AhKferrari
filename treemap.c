@@ -204,15 +204,15 @@ Pair * nextTreeMap(TreeMap * tree) {
     return tree->current->pair;
   }
   
-  treeNode * aux = tree->current->parent;
+  //treeNode * aux = tree->current->parent;
 
-  while(aux != NULL && tree->current == aux->right){
-    tree->current = aux;
-    aux = aux->parent;
+  while(tree->current->parent != NULL && tree->current == tree->current->parent->right){
+    tree->current = tree->current->parent;
+    tree->current->parent = tree->current->parent->parent;
   }
-  if(aux != NULL){
-    tree->current = aux;
-    return aux;
+  if(tree->current->parent != NULL){
+    tree->current = tree->current->parent;
+    return tree->current->parent->pair;
   }
   return NULL;
 }
