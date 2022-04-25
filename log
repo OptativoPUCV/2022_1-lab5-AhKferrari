@@ -1558,3 +1558,16 @@ Mon Apr 25 01:19:08 UTC 2022:
  tests:  16|4
 total_score: 30/70
 04bacfa
+Mon Apr 25 01:27:43 UTC 2022: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:106:7: error: expected ‘;’ before ‘node’
+       node->left = NULL;
+       ^~~~
+treemap.c:112:7: error: expected ‘;’ before ‘node’
+       node->right = NULL;
+       ^~~~
+Compilation failed
+84babac
