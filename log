@@ -2331,3 +2331,35 @@ Mon Apr 25 20:49:02 UTC 2022:
  1 file changed, 12 insertions(+), 13 deletions(-)
  tests:  0|0
 d955a9f
+Mon Apr 25 21:01:24 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:105:15: error: passing argument 1 of ‘is_equal’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   if(is_equal(node->parent->right, node)){
+               ^~~~
+treemap.c:22:5: note: expected ‘TreeMap * {aka struct TreeMap *}’ but argument is of type ‘TreeNode * {aka struct TreeNode *}’
+ int is_equal(TreeMap* tree, void* key1, void* key2){
+     ^~~~~~~~
+treemap.c:105:6: error: too few arguments to function ‘is_equal’
+   if(is_equal(node->parent->right, node)){
+      ^~~~~~~~
+treemap.c:22:5: note: declared here
+ int is_equal(TreeMap* tree, void* key1, void* key2){
+     ^~~~~~~~
+treemap.c:123:15: error: passing argument 1 of ‘is_equal’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   if(is_equal(node->parent->left, node)){
+               ^~~~
+treemap.c:22:5: note: expected ‘TreeMap * {aka struct TreeMap *}’ but argument is of type ‘TreeNode * {aka struct TreeNode *}’
+ int is_equal(TreeMap* tree, void* key1, void* key2){
+     ^~~~~~~~
+treemap.c:123:6: error: too few arguments to function ‘is_equal’
+   if(is_equal(node->parent->left, node)){
+      ^~~~~~~~
+treemap.c:22:5: note: declared here
+ int is_equal(TreeMap* tree, void* key1, void* key2){
+     ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7391654
