@@ -142,8 +142,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
   }
     if(node->left !=NULL && node->right != NULL){
       TreeNode * mini = minimum(node->right);
-      mini->key = node->key; 
-      mini->value = node->value;
+      node->key = mini->key; 
+      node->value = mini->value; 
       node = NULL;
       removeNode(tree, mini);
       return;
