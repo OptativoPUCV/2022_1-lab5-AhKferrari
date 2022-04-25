@@ -206,21 +206,13 @@ Pair * nextTreeMap(TreeMap * tree) {
   
   treeNode * aux = tree->current->parent;
 
-  while(aux != NULL){
+  while(aux != NULL && tree->current == aux->right){
     tree->current = aux;
     aux = aux->parent;
+  }
+  if(aux != NULL){
+    tree->current = aux;
     return aux->pair;
   }
-
-  
-  /*else{
-   while(aux->pair->key < tree->current->pair->key){
-     if(aux->parent->pair->key < tree->current->pair->key){
-       aux = aux->parent;
-       aux->parent = aux->parent->parent;
-     }
-   else return aux->pair;} */
-  
-  
   return NULL;
 }
