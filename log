@@ -2793,3 +2793,20 @@ Mon Apr 25 23:35:13 UTC 2022:
  tests:  20|2
 total_score: 45/70
 242d9c4
+Mon Apr 25 23:35:24 UTC 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c:219:3: error: expected identifier or ‘(’ before ‘return’
+   return NULL;
+   ^~~~~~
+treemap.c:220:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:217:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+4aaebea
