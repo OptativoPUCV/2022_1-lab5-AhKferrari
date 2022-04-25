@@ -1597,3 +1597,16 @@ treemap.c:112:7: error: expected ‘;’ before ‘node’
        ^~~~
 Compilation failed
 4bac5cc
+Mon Apr 25 01:33:14 UTC 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘removeNode’:
+treemap.c:106:7: error: expected ‘;’ before ‘node’
+       node->left = NULL;
+       ^~~~
+treemap.c:112:7: error: expected ‘;’ before ‘node’
+       node->right = NULL;
+       ^~~~
+Compilation failed
+a383f5c
