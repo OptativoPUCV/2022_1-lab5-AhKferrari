@@ -2035,3 +2035,14 @@ Mon Apr 25 03:12:26 UTC 2022:
  tests:  18|3
 total_score: 35/70
 45ea8fc
+Mon Apr 25 03:17:52 UTC 2022: 
+ treemap.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:179:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return aux;
+            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+c557d53
