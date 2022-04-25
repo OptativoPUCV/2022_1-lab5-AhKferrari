@@ -210,7 +210,7 @@ Pair * nextTreeMap(TreeMap * tree) {
   else{
    while(aux->pair->key < tree->current->pair->key){
      if(aux->parent->pair->key < tree->current->pair->key){
-       aux->parent= aux->parent->parent;
+       aux= aux->parent;
      }
    else return aux->pair;} 
   } 
