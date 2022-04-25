@@ -161,8 +161,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-  //Pair * first = (Pair *)malloc(sizeof(Pair));  
-  first = minimum(tree*);
+  Pair * first = (Pair *)malloc(sizeof(Pair));  
+  first = minimum(tree);
   return first;
 }
 
