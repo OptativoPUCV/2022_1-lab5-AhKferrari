@@ -188,8 +188,8 @@ Pair * nextTreeMap(TreeMap * tree) {
      if(aux->parent->key < tree->current->key){
        aux->parent->key = aux->parent->parent->key;
      }
-   } */
-  }
+   } 
+  } */
   
   return NULL;
 }
