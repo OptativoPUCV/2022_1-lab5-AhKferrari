@@ -101,15 +101,15 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     return;
   }
   else if (node->left != NULL && node->right == NULL){
-      node->parent = node->left;
-      node->left = node->parent;
+      node->parent->left = node->left;
+      node->left->parent = node->parent;
       node=NULL; 
       //free(node);
       return;}
 
     if(node->left == NULL && node->right != NULL){
-      node->parent = node->right;
-      node->right = node->parent;
+      node->parent->right = node->right;
+      node->right->parent = node->parent;
       node=NULL;
       //free(node);
       return;}  
@@ -161,7 +161,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+  Pair * first = (Pair *)malloc(sizeof(Pair));  
+  first = minimum(tree);
+  return first;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
