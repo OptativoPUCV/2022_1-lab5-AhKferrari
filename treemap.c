@@ -200,8 +200,6 @@ Pair * upperBound(TreeMap * tree, void* key) {
       ubNode = tree->current;
       }
     if(ubNode == NULL && tree->current == NULL) return NULL;
-    
-      
     }
   return ubNode->pair;
   }
@@ -221,8 +219,6 @@ Pair * nextTreeMap(TreeMap * tree) {
     return tree->current->pair;
   }
   
-  //treeNode * aux = tree->current->parent;
-
   while(tree->current->parent != NULL && tree->current == tree->current->parent->right){
     tree->current = tree->current->parent;
   }
