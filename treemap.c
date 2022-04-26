@@ -196,8 +196,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
     if(tree->lower_than(tree->current->pair->key, key)){ 
       tree->current = tree->current->right;
     }else{
-      tree->current = tree->current->left;
       ubNode = tree->current;
+      tree->current = tree->current->left;
       }
     if(ubNode == NULL && tree->current == NULL) return NULL;
     }
