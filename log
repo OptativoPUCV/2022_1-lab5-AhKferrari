@@ -3033,3 +3033,16 @@ treemap.c:190:14: error: variable ‘ub_node’ set but not used [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 998eb92
+Tue Apr 26 00:03:15 UTC 2022: 
+ treemap.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘upperBound’:
+treemap.c:194:35: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(is_equal(tree,tree->current->key, key))
+                                   ^~
+treemap.c:196:38: error: ‘TreeNode {aka struct TreeNode}’ has no member named ‘key’
+     if(tree->lower_than(tree->current->key, key)){
+                                      ^~
+Compilation failed
+491ec17
