@@ -3067,3 +3067,17 @@ treemap.c:205:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 cb4bb99
+Tue Apr 26 00:04:35 UTC 2022: 
+ treemap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function ‘upperBound’:
+treemap.c:202:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return ub_node;
+            ^~~~~~~
+treemap.c:204:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+02c02d3
