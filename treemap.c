@@ -199,9 +199,10 @@ Pair * upperBound(TreeMap * tree, void* key) {
       tree->current = tree->current->left;
       ubNode = tree->current;
       }
+    return ubNode->pair;
     if(ubNode == NULL && tree->current == NULL) return NULL;
     }
-  return ubNode->pair;
+ 
   }
 
 Pair * firstTreeMap(TreeMap * tree) {
